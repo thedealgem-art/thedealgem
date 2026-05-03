@@ -379,23 +379,41 @@
         <div class="card-detail">3개월 $5,000 사용 · 연회비 $95</div>
       </div>
       <div class="bonus-badge">한정 🔥</div>
-      <span class="click-badge" id="clicks-chase"></span>
+      <span class="click-badge" id="clicks-preferred"></span>
+    </a>
+    <a class="card-link" href="https://www.referyourchasecard.com/19v/B1LWVDO0Q7" target="_blank" onclick="trackClick(this, 'Chase Sapphire Reserve')">
+      <div class="card-icon" style="background: linear-gradient(135deg, #0f2460, #1a3a8f);">💎</div>
+      <div class="card-info">
+        <div class="card-name">Chase Sapphire Reserve®</div>
+        <div class="card-bonus">150,000 포인트 ≈ $3,000</div>
+        <div class="card-detail">3개월 $6,000 사용 · 연회비 $795</div>
+      </div>
+      <div class="bonus-badge">역대급 🔥</div>
+      <span class="click-badge" id="clicks-reserve"></span>
     </a>
   </div>
 
   <div class="info-box">
-    <div class="info-box-title">📊 첫 해 손익 계산</div>
+    <div class="info-box-title">📊 Preferred vs Reserve 비교</div>
     <div class="info-row">
-      <span class="label">사인업 보너스 가치</span>
-      <span class="value green">+ $937</span>
+      <span class="label"></span>
+      <span class="value" style="color:var(--primary);font-size:11px;">Preferred</span>
+      <span class="value" style="color:#0f2460;font-size:11px;">Reserve</span>
+    </div>
+    <div class="info-row">
+      <span class="label">사인업 보너스</span>
+      <span class="value green" style="font-size:12px;">$937</span>
+      <span class="value green" style="font-size:12px;">$3,000</span>
     </div>
     <div class="info-row">
       <span class="label">연회비</span>
-      <span class="value red">− $95</span>
+      <span class="value red" style="font-size:12px;">$95</span>
+      <span class="value red" style="font-size:12px;">$795</span>
     </div>
     <div class="info-row">
       <span class="label">첫 해 순이익</span>
-      <span class="value green">≈ + $842 💰</span>
+      <span class="value green" style="font-size:12px;">+$842</span>
+      <span class="value green" style="font-size:12px;">+$2,205</span>
     </div>
   </div>
 
@@ -411,7 +429,10 @@
 <div class="toast" id="toast"></div>
 
 <script>
-  const KEYS = { 'Chase Sapphire Preferred': 'clicks-chase' };
+  const KEYS = {
+    'Chase Sapphire Preferred': 'clicks-preferred',
+    'Chase Sapphire Reserve':   'clicks-reserve'
+  };
 
   function loadCounts() {
     Object.entries(KEYS).forEach(([name, elId]) => {
